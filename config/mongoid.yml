@@ -142,6 +142,6 @@ production:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      uri: <%= ENV['MONGOLAB_URI']
+      uri: <%= ENV['MONGOLAB_URI'] %>
       options:
         connect_timeout: 15
