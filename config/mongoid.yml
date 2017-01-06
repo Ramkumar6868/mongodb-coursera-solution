@@ -142,6 +142,6 @@ production:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      uri: "mongodb://[zips_coursera]:[kulriya68]@ds157248.mongolab.com:57248/zips_coursera"
+      uri: <%= ENV['MONGOLAB_URI']
       options:
         connect_timeout: 15
