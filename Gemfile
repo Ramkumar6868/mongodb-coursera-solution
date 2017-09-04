@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
 
+gem 'sqlite3', group: :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -34,6 +35,11 @@ gem 'spring',        group: :development
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :production do
+  #use postgres on heroku
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
