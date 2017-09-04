@@ -21,5 +21,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  clients:
+    default:
+      uri: <%= ENV['MONGOLAB_URI'] %>
+      options:
+        connect_timeout: 15
